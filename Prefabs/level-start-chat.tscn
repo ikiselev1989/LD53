@@ -1,0 +1,102 @@
+[gd_scene load_steps=6 format=3 uid="uid://ny2fg131v5so"]
+
+[ext_resource type="Script" path="res://Scripts/LevelChat.gd" id="1_b0rhy"]
+[ext_resource type="Texture2D" uid="uid://cylds1p6ocbin" path="res://assets/radio.png" id="1_ydqla"]
+[ext_resource type="Texture2D" uid="uid://duel2c6hfbn0u" path="res://assets/sergey.png" id="3_0br4h"]
+[ext_resource type="LabelSettings" uid="uid://cnkvo15kgkmgu" path="res://level-start-chat.tres" id="3_qlj76"]
+[ext_resource type="Texture2D" uid="uid://b16a6vwjka7n2" path="res://assets/green-button.png" id="5_dqfs5"]
+
+[node name="Chat" type="Control"]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_top = -30.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_b0rhy")
+
+[node name="Radio" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -234.0
+offset_top = -72.0
+offset_right = 234.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="Radio"]
+layout_mode = 2
+texture = ExtResource("1_ydqla")
+stretch_mode = 2
+
+[node name="Label" type="Label" parent="Radio"]
+layout_mode = 2
+text = "Hey, Serg, we need your help, the tourists 
+by the lake ran out of booze."
+label_settings = ExtResource("3_qlj76")
+uppercase = true
+
+[node name="Sergey" type="HBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -234.0
+offset_top = -72.0
+offset_right = 234.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="Sergey"]
+layout_mode = 2
+texture = ExtResource("3_0br4h")
+stretch_mode = 2
+
+[node name="Label" type="Label" parent="Sergey"]
+layout_mode = 2
+text = "I'm on my way!"
+label_settings = ExtResource("3_qlj76")
+uppercase = true
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 218.0
+offset_top = -6.0
+offset_right = 272.0
+offset_bottom = 17.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "SPACE"
+label_settings = ExtResource("3_qlj76")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 273.0
+offset_top = -12.0
+offset_right = 313.0
+offset_bottom = 28.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("5_dqfs5")
+stretch_mode = 2
